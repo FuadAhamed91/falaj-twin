@@ -59,6 +59,9 @@ MATS = {
     "leaf": dict(tex="leaf", tile=None, nstr=0.5, double=True),
     "trunk": dict(tex="trunk", tile=None, nstr=0.8),
     "panel_white": dict(tex="panel_white", tile=6, nstr=0.5),
+    "checker": dict(tex="checker", tile=9, nstr=0.6),
+    "cream": dict(color=(0.90, 0.84, 0.68), rough=0.7),
+    "cream_dark": dict(color=(0.74, 0.62, 0.44), rough=0.72),
     # untextured
     "water": dict(color=(0.04, 0.36, 0.42), rough=0.04, metal=0.0, double=True),
     "water_foam": dict(color=(0.62, 0.72, 0.70), rough=0.35),

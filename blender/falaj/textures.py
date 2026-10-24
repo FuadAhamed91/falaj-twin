@@ -461,7 +461,24 @@ def tex_panel_white(name="panel_white", seed=131, n=1024):
     save_set(name, alb, -joint, rough, nstrength=6.0)
 
 
+def tex_checker(name="checker", a=(0.90, 0.84, 0.68), b=(0.74, 0.60, 0.40), cells=6, n=1024):
+    """DEWA-style decorative facade: tan/cream checkerboard with recessed joints."""
+    X, Y = grid(n)
+    cx, cy = np.floor(X * cells).astype(int), np.floor(Y * cells).astype(int)
+    chk = ((cx + cy) % 2).astype(np.float32)
+    fx, fy = (X * cells) % 1.0, (Y * cells) % 1.0
+    joint = (np.minimum(fx, 1 - fx) < 0.035) | (np.minimum(fy, 1 - fy) < 0.035)
+    fine = spec(n, 0.8, 5, lo=0.12)
+    lum = 1 + 0.02 * fine - 0.22 * joint
+    base = chk[..., None] * rgb(b) + (1 - chk[..., None]) * rgb(a)
+    alb = np.clip(base * lum[..., None], 0, 1)
+    height = chk * 0.5 - joint.astype(np.float32)
+    rough = np.clip(0.6 + 0.08 * fine, 0, 1)
+    save_set(name, alb, height, rough, nstrength=4.0)
+
+
 def build_all():
+    tex_checker()
     tex_concrete("concrete", (0.66, 0.65, 0.62), 1)
     tex_concrete("concrete_dark", (0.47, 0.47, 0.45), 5)
     tex_cladding("cladding", (0.80, 0.82, 0.83))

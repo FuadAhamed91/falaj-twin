@@ -36,7 +36,7 @@ export function Badge({
   className?: string
 }) {
   const tones: Record<string, string> = {
-    neutral: 'bg-white/[0.04] text-fog-300 ring-white/[0.08]',
+    neutral: 'bg-ink-800 text-fog-300 ring-hair-strong',
     signal: 'bg-signal/10 text-signal ring-signal/25',
     ok: 'bg-ok/10 text-ok ring-ok/25',
     warn: 'bg-warn/10 text-warn ring-warn/30',
@@ -133,7 +133,7 @@ export function Segmented<T extends string>({
   size?: 'sm' | 'md'
 }) {
   return (
-    <div className="inline-flex rounded-lg border border-white/[0.07] bg-ink-900/60 p-0.5">
+    <div className="inline-flex rounded-lg border border-hair-strong bg-ink-900/60 p-0.5">
       {options.map((o) => (
         <button
           key={o.value}

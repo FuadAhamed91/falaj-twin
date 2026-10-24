@@ -41,7 +41,7 @@ export function SettingsPage() {
           <div className="eyebrow mb-3 flex items-center gap-2"><Database size={13} /> Data provenance</div>
           <div className="grid gap-2 md:grid-cols-3">
             {facilities.facilities.map((f) => (
-              <div key={f.id} className="rounded-lg border border-white/[0.06] bg-ink-800/40 p-3">
+              <div key={f.id} className="rounded-lg border border-hair bg-ink-800/40 p-3">
                 <div className="text-[12px] font-semibold text-fog-100">{pick(f.displayName, f.displayNameAr)}</div>
                 <div className="num mt-1 text-[10.5px] text-fog-400">{f.coordinates.lat.toFixed(4)}, {f.coordinates.lon.toFixed(4)}</div>
                 <div className="mt-0.5 text-[9.5px] text-fog-500">{f.coordinatePrecision}</div>

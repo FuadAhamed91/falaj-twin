@@ -44,7 +44,7 @@ export function AssistantPanel({ className }: { className?: string }) {
 
   return (
     <div className={`panel flex min-h-0 flex-col ${className ?? ''}`}>
-      <div className="flex items-center justify-between border-b border-white/[0.06] p-3">
+      <div className="flex items-center justify-between border-b border-hair p-3">
         <div className="flex items-center gap-2">
           <span className="grid h-7 w-7 place-items-center rounded-lg bg-signal/15 text-signal"><Bot size={15} /></span>
           <div>
@@ -71,9 +71,9 @@ export function AssistantPanel({ className }: { className?: string }) {
                 m.role === 'user' ? 'bg-signal/15 text-fog-50 ring-1 ring-inset ring-signal/25' : 'bg-ink-800/70 text-fog-200'}`}>
                 {m.text}
                 {m.grounding && m.grounding.length > 0 && (
-                  <div className="mt-1.5 flex flex-wrap gap-1 border-t border-white/[0.06] pt-1.5">
+                  <div className="mt-1.5 flex flex-wrap gap-1 border-t border-hair pt-1.5">
                     {[...new Set(m.grounding)].slice(0, 6).map((g) => (
-                      <span key={g} className="rounded bg-white/5 px-1.5 py-0.5 text-[9px] text-fog-500">{g}</span>
+                      <span key={g} className="rounded bg-ink-800 px-1.5 py-0.5 text-[9px] text-fog-500">{g}</span>
                     ))}
                   </div>
                 )}
@@ -83,16 +83,16 @@ export function AssistantPanel({ className }: { className?: string }) {
         </AnimatePresence>
       </div>
 
-      <div className="border-t border-white/[0.06] p-3">
+      <div className="border-t border-hair p-3">
         <div className="mb-2 flex flex-wrap gap-1.5">
           {QUICK.map((q) => (
             <button key={q.intent} onClick={() => ask(q.intent, t(q.key))}
-              className="rounded-full border border-white/[0.08] bg-ink-800/60 px-2.5 py-1 text-[10.5px] text-fog-300 transition-colors hover:border-signal/30 hover:text-signal">
+              className="rounded-full border border-hair-strong bg-ink-800/60 px-2.5 py-1 text-[10.5px] text-fog-300 transition-colors hover:border-signal/30 hover:text-signal">
               {t(q.key)}
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-2 rounded-lg border border-white/[0.08] bg-ink-900 px-3 py-2">
+        <div className="flex items-center gap-2 rounded-lg border border-hair-strong bg-ink-900 px-3 py-2">
           <input disabled placeholder={t('assistant.ask')} className="flex-1 bg-transparent text-[12px] text-fog-300 placeholder:text-fog-600 focus:outline-none" />
           <Send size={14} className="text-fog-600" />
         </div>

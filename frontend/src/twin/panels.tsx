@@ -51,10 +51,10 @@ export function RunControls({ compact = false }: { compact?: boolean }) {
           <Pause size={14} /> {t('ctrl.pause')}
         </button>
       )}
-      <button disabled={demoActive} onClick={reset} className={`${btn} bg-white/5 text-fog-300 ring-1 ring-inset ring-white/10 hover:text-fog-100`}>
+      <button disabled={demoActive} onClick={reset} className={`${btn} bg-ink-800 text-fog-300 ring-1 ring-inset ring-hair-strong hover:text-fog-100`}>
         <RotateCcw size={14} /> {t('ctrl.reset')}
       </button>
-      <button disabled={demoActive} onClick={replay} className={`${btn} bg-white/5 text-fog-300 ring-1 ring-inset ring-white/10 hover:text-fog-100`}>
+      <button disabled={demoActive} onClick={replay} className={`${btn} bg-ink-800 text-fog-300 ring-1 ring-inset ring-hair-strong hover:text-fog-100`}>
         <Repeat size={14} /> {t('ctrl.replay')}
       </button>
       <div className="ms-2 flex flex-1 items-center gap-2">
@@ -160,7 +160,7 @@ export function TimelinePanel({ max = 40 }: { max?: number }) {
               className="flex gap-2.5">
               <div className="flex flex-col items-center">
                 <span className="mt-1 h-2 w-2 shrink-0 rounded-full" style={{ background: TL_COLOR[e.kind], boxShadow: `0 0 6px ${TL_COLOR[e.kind]}` }} />
-                {i < items.length - 1 && <span className="mt-1 w-px flex-1 bg-white/10" />}
+                {i < items.length - 1 && <span className="mt-1 w-px flex-1 bg-ink-700" />}
               </div>
               <div className="pb-1">
                 <div className="flex items-center gap-2">
@@ -215,7 +215,7 @@ export function PredictionPanel() {
           <div className="text-[10px] italic text-fog-500">{t('panel.estimateNote')}</div>
 
           {rec && (
-            <div className="rounded-lg border border-white/10 bg-ink-800/50 p-3">
+            <div className="rounded-lg border border-hair-strong bg-ink-800/50 p-3">
               <div className="eyebrow mb-1.5">{t('resp.recommended')}</div>
               <div className="text-[12px] font-medium text-fog-100">{pick(rec.label, rec.labelAr)}</div>
               <div className="mt-1 text-[10.5px] text-fog-400">{pick(rec.description, rec.descriptionAr)}</div>
@@ -251,7 +251,7 @@ export function DetectionsPanel() {
       <div className="min-h-0 flex-1 space-y-2 overflow-y-auto">
         {world.detections.length === 0 && <div className="text-[11px] text-fog-500">No detections (baseline has none).</div>}
         {world.detections.map((d) => (
-          <div key={d.id} className="rounded-lg border border-white/[0.06] bg-ink-800/40 p-2.5">
+          <div key={d.id} className="rounded-lg border border-hair bg-ink-800/40 p-2.5">
             <div className="flex items-center justify-between gap-2">
               <span className="num text-[10px] text-fog-500">{fmtClock(d.at)}</span>
               <Badge tone={d.severity === 'critical' ? 'threat' : d.severity === 'high' ? 'warn' : 'signal'}>{d.severity}</Badge>

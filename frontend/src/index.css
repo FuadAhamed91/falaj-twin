@@ -13,114 +13,111 @@
   --font-mono: "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", monospace;
   --font-arabic: "IBM Plex Sans Arabic", "Inter Variable", ui-sans-serif, sans-serif;
 
-  /* Surfaces: deep navy → black */
-  --color-ink-950: #02060d;
-  --color-ink-900: #050b16;
-  --color-ink-850: #08111f;
-  --color-ink-800: #0b1628;
-  --color-ink-750: #0f1d33;
-  --color-ink-700: #13243e;
-  --color-ink-600: #1b304f;
-  --color-ink-500: #284366;
+  /* Surfaces — light. The token names keep their old roles (ink = surface,
+     fog = text) but now resolve to a light palette, so existing utilities
+     (bg-ink-850, text-fog-100…) become the light theme automatically. */
+  --color-ink-950: #eef2f8; /* app background */
+  --color-ink-900: #f4f7fb; /* sunken / rails */
+  --color-ink-850: #ffffff; /* panels / cards */
+  --color-ink-800: #f1f5f9; /* subtle fills */
+  --color-ink-750: #eef2f7;
+  --color-ink-700: #e2e8f0; /* tracks / dividers */
+  --color-ink-600: #cbd5e1;
+  --color-ink-500: #94a3b8;
 
-  /* Text */
-  --color-fog-50: #f1f5fb;
-  --color-fog-100: #e2e9f4;
-  --color-fog-200: #c3cfe1;
-  --color-fog-300: #9fb0c9;
-  --color-fog-400: #7488a6;
-  --color-fog-500: #566a87;
+  /* Text — dark on light */
+  --color-fog-50: #0b1220;
+  --color-fog-100: #16213a;
+  --color-fog-200: #27364f;
+  --color-fog-300: #45566f;
+  --color-fog-400: #64748b;
+  --color-fog-500: #94a3b8;
+  --color-fog-600: #b4c0d0;
 
-  /* Signal palette — each colour has exactly one meaning */
-  --color-signal: #22d3ee;        /* network / interactive */
-  --color-signal-deep: #2563eb;   /* links, focus */
-  --color-ok: #34d399;            /* healthy, contained */
-  --color-warn: #fbbf24;          /* detection / early warning */
-  --color-predict: #a78bfa;       /* scenario-based prediction */
-  --color-threat: #fb3b5c;        /* simulated attack / impact */
+  /* Signal palette — tuned for contrast on white, one meaning each */
+  --color-signal: #0891b2;        /* network / interactive (cyan-600) */
+  --color-signal-deep: #2563eb;   /* links / focus (blue-600) */
+  --color-ok: #059669;            /* healthy / contained (emerald-600) */
+  --color-warn: #d97706;          /* detection / early warning (amber-600) */
+  --color-predict: #7c3aed;       /* scenario-based prediction (violet-600) */
+  --color-threat: #e11d48;        /* simulated attack / impact (rose-600) */
 
-  --radius-panel: 14px;
-  --shadow-panel: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 20px 40px -24px rgb(0 0 0 / 0.8);
+  --color-hair: #e6ebf2;          /* hairline borders */
+  --color-hair-strong: #d8e0ea;
+
+  --radius-panel: 18px;
+  --shadow-panel: 0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -12px rgb(15 23 42 / 0.12);
+  --shadow-float: 0 2px 6px rgb(15 23 42 / 0.06), 0 18px 40px -16px rgb(15 23 42 / 0.22);
 
   --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
   --animate-sweep: sweep 2.8s linear infinite;
 
-  @keyframes pulse-soft {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.45; }
-  }
-  @keyframes sweep {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(100%); }
-  }
+  @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  @keyframes sweep { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
 }
 
 @layer base {
-  html,
-  body,
-  #root {
-    height: 100%;
-  }
+  html, body, #root { height: 100%; }
   html {
-    color-scheme: dark;
+    color-scheme: light;
     background: var(--color-ink-950);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   body {
-    @apply bg-ink-950 font-sans text-fog-100 antialiased;
+    @apply font-sans text-fog-100 antialiased;
+    background:
+      radial-gradient(1200px 700px at 78% -8%, #e9f3fb 0%, transparent 55%),
+      radial-gradient(900px 600px at -5% 0%, #eef0fb 0%, transparent 50%),
+      var(--color-ink-950);
     font-feature-settings: "cv11", "ss01", "ss03";
     overflow: hidden;
   }
-  [dir="rtl"] body,
-  [dir="rtl"] {
-    font-family: var(--font-arabic);
-  }
-  ::selection {
-    background: color-mix(in oklab, var(--color-signal) 35%, transparent);
-  }
+  [dir="rtl"] body, [dir="rtl"] { font-family: var(--font-arabic); }
+  ::selection { background: color-mix(in oklab, var(--color-signal) 22%, transparent); }
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--color-ink-600) transparent;
   }
-  :focus-visible {
-    outline: 2px solid var(--color-signal);
-    outline-offset: 2px;
+  *::-webkit-scrollbar { width: 9px; height: 9px; }
+  *::-webkit-scrollbar-thumb { background: #cfd8e3; border-radius: 9999px; border: 2px solid transparent; background-clip: content-box; }
+  *::-webkit-scrollbar-thumb:hover { background: #b6c2d1; background-clip: content-box; }
+  :focus-visible { outline: 2px solid var(--color-signal); outline-offset: 2px; }
+
+  /* Smooth, consistent micro-motion across controls */
+  button, a, [role="button"], input, .panel, .glass {
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    transition-duration: 180ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
 @layer components {
   .panel {
-    @apply rounded-[var(--radius-panel)] border border-white/[0.06] bg-ink-850/80 shadow-[var(--shadow-panel)] backdrop-blur-xl;
+    @apply rounded-[var(--radius-panel)] border border-hair bg-white shadow-[var(--shadow-panel)];
   }
   .panel-solid {
-    @apply rounded-[var(--radius-panel)] border border-white/[0.06] bg-ink-850 shadow-[var(--shadow-panel)];
+    @apply rounded-[var(--radius-panel)] border border-hair bg-white shadow-[var(--shadow-panel)];
   }
   .glass {
-    @apply rounded-[var(--radius-panel)] border border-white/[0.08] bg-ink-900/70 shadow-[var(--shadow-panel)] backdrop-blur-xl;
+    @apply rounded-[var(--radius-panel)] border border-hair/80 bg-white/80 shadow-[var(--shadow-panel)] backdrop-blur-xl;
   }
   .eyebrow {
-    @apply text-[10.5px] font-semibold tracking-[0.14em] text-fog-400 uppercase;
+    @apply text-[10.5px] font-semibold tracking-[0.12em] text-fog-400 uppercase;
   }
-  [dir="rtl"] .eyebrow {
-    @apply tracking-normal;
-  }
-  .num {
-    @apply font-mono tabular-nums;
-  }
-  .hairline {
-    @apply border-white/[0.06];
-  }
+  [dir="rtl"] .eyebrow { @apply tracking-normal; }
+  .num { @apply font-mono tabular-nums; }
+  .hairline { @apply border-hair; }
   .grid-bg {
     background-image:
-      linear-gradient(to right, rgb(255 255 255 / 0.025) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.025) 1px, transparent 1px);
+      linear-gradient(to right, rgb(15 23 42 / 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(15 23 42 / 0.035) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.001ms !important;
     transition-duration: 0.001ms !important;
   }

@@ -56,7 +56,7 @@ export function FacilitiesPage() {
                   <Badge tone="warn">{t('badge.referenceArch')}</Badge>
                 </div>
 
-                <div className="rounded-lg border border-white/[0.06] bg-ink-800/40 p-3 text-[11px]">
+                <div className="rounded-lg border border-hair bg-ink-800/40 p-3 text-[11px]">
                   <div className="flex items-center gap-1.5 text-fog-300"><MapPin size={12} /> <span className="num">{f.coordinates.lat.toFixed(4)}, {f.coordinates.lon.toFixed(4)}</span></div>
                   <div className="mt-1 text-[10px] text-fog-500">{f.coordinatePrecision}</div>
                 </div>
@@ -71,7 +71,7 @@ export function FacilitiesPage() {
                   <button onClick={() => open(f.id)} className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-signal/15 px-3 py-2 text-xs font-semibold text-signal ring-1 ring-inset ring-signal/25 hover:bg-signal/20">
                     <Box size={14} /> {t('nav.twin')}
                   </button>
-                  <a href={f.officialUrl} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-1.5 rounded-lg border border-white/10 px-3 py-2 text-xs text-fog-300 hover:text-fog-100">
+                  <a href={f.officialUrl} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-1.5 rounded-lg border border-hair-strong px-3 py-2 text-xs text-fog-300 hover:text-fog-100">
                     <ExternalLink size={13} /> Source
                   </a>
                 </div>

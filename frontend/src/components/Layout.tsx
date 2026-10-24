@@ -41,8 +41,8 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="grid h-full grid-cols-[auto_1fr] bg-ink-950">
       {/* Sidebar */}
-      <aside className="flex w-[232px] flex-col border-e border-white/[0.06] bg-ink-900/60 backdrop-blur-xl">
-        <div className="border-b border-white/[0.06] px-4 py-4">
+      <aside className="flex w-[232px] flex-col border-e border-hair bg-ink-900/60 backdrop-blur-xl">
+        <div className="border-b border-hair px-4 py-4">
           <BrandLockup />
         </div>
         <nav className="flex-1 space-y-0.5 overflow-y-auto p-3">
@@ -56,7 +56,7 @@ export function Layout({ children }: { children: ReactNode }) {
                   'group flex items-center gap-3 rounded-lg px-3 py-2 text-[13px] font-medium transition-colors',
                   isActive
                     ? 'bg-signal/10 text-signal ring-1 ring-inset ring-signal/20'
-                    : 'text-fog-400 hover:bg-white/[0.03] hover:text-fog-200',
+                    : 'text-fog-400 hover:bg-ink-800 hover:text-fog-200',
                 )
               }
             >
@@ -65,7 +65,7 @@ export function Layout({ children }: { children: ReactNode }) {
             </NavLink>
           ))}
         </nav>
-        <div className="border-t border-white/[0.06] p-3">
+        <div className="border-t border-hair p-3">
           <button
             onClick={demoActive ? stopDemo : startDemo}
             className={clsx(
@@ -83,7 +83,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
       {/* Main */}
       <div className="flex min-w-0 flex-col">
-        <header className="flex items-center justify-between gap-4 border-b border-white/[0.06] bg-ink-900/40 px-6 py-3 backdrop-blur-xl">
+        <header className="flex items-center justify-between gap-4 border-b border-hair bg-ink-900/40 px-6 py-3 backdrop-blur-xl">
           <div className="flex items-center gap-3">
             <h1 className="text-sm font-semibold text-fog-100">{t(pageKey(loc.pathname))}</h1>
             <span className="hidden text-[11px] text-fog-500 sm:inline">· {t('app.sub')}</span>
@@ -97,7 +97,7 @@ export function Layout({ children }: { children: ReactNode }) {
             )}
             <button
               onClick={toggle}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-white/[0.08] bg-ink-850 px-2.5 py-1.5 text-xs font-medium text-fog-300 hover:text-fog-100"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-hair-strong bg-ink-850 px-2.5 py-1.5 text-xs font-medium text-fog-300 hover:text-fog-100"
               aria-label="Toggle language"
             >
               <Languages size={14} />

@@ -20,7 +20,7 @@ export function ResponsePage() {
     <div className="grid h-full grid-cols-[1fr_340px_320px] gap-3 overflow-hidden p-4">
       {/* Viewer + controls */}
       <div className="flex min-h-0 flex-col gap-3">
-        <div className="relative min-h-0 flex-1 overflow-hidden rounded-[var(--radius-panel)] border border-white/[0.06]">
+        <div className="relative min-h-0 flex-1 overflow-hidden rounded-[var(--radius-panel)] border border-hair">
           <PlantSchematic topo={topo} scenario={scn} world={world} selectedId={selectedId} onSelect={selectNode} />
           <div className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between p-4">
             <div>

@@ -124,7 +124,7 @@ export function AnalyticsPage() {
             {incidents.map((inc, i) => {
               const Icon = sectorIcon[inc.sector]
               return (
-                <div key={i} className="flex items-center gap-3 rounded-lg border border-white/[0.06] bg-ink-800/40 px-3 py-2">
+                <div key={i} className="flex items-center gap-3 rounded-lg border border-hair bg-ink-800/40 px-3 py-2">
                   <Icon size={15} className="text-fog-300" />
                   <span className="flex-1 text-[12px] text-fog-100">{inc.site}</span>
                   <span className="num text-[11px] text-fog-500">{inc.time}</span>

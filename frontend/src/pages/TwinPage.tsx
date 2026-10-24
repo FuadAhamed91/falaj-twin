@@ -38,7 +38,7 @@ export function TwinPage() {
               const activeTab = f.id === facilityId
               return (
                 <button key={f.id} onClick={() => selectFacility(f.id as FacilityId)}
-                  className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-medium transition-colors ${activeTab ? 'border-signal/30 bg-signal/10 text-signal' : 'border-white/[0.06] bg-ink-850 text-fog-400 hover:text-fog-200'}`}>
+                  className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-medium transition-colors ${activeTab ? 'border-signal/30 bg-signal/10 text-signal' : 'border-hair bg-ink-850 text-fog-400 hover:text-fog-200'}`}>
                   <Icon size={14} /> {pick(f.displayName, f.displayNameAr)}
                   {f.hero && <Badge tone="signal" className="ms-1">Hero</Badge>}
                 </button>
@@ -55,7 +55,7 @@ export function TwinPage() {
         </div>
 
         {/* Viewer */}
-        <div className="relative min-h-0 flex-1 overflow-hidden rounded-[var(--radius-panel)] border border-white/[0.06] bg-ink-900">
+        <div className="relative min-h-0 flex-1 overflow-hidden rounded-[var(--radius-panel)] border border-hair bg-ink-900">
           {view === 'physical' ? (
             <TwinView />
           ) : (
@@ -78,7 +78,7 @@ export function TwinPage() {
           </div>
           {view === 'cyber' && (
             <button onClick={() => setZones((z) => !z)}
-              className="pointer-events-auto absolute right-4 top-20 inline-flex items-center gap-1.5 rounded-lg border border-white/10 bg-ink-850/90 px-2.5 py-1.5 text-[11px] text-fog-300 hover:text-fog-100">
+              className="pointer-events-auto absolute right-4 top-20 inline-flex items-center gap-1.5 rounded-lg border border-hair-strong bg-ink-850/90 px-2.5 py-1.5 text-[11px] text-fog-300 hover:text-fog-100">
               <Layers size={12} /> {t('twin.zones')}
             </button>
           )}
@@ -86,7 +86,7 @@ export function TwinPage() {
           {world.metrics.length > 0 && (
             <div className="pointer-events-none absolute bottom-4 left-4 flex gap-2">
               {world.metrics.map((m) => (
-                <div key={m.key} className="rounded-lg border border-white/10 bg-ink-900/85 px-3 py-2 backdrop-blur">
+                <div key={m.key} className="rounded-lg border border-hair-strong bg-ink-900/85 px-3 py-2 backdrop-blur">
                   <div className="text-[9px] uppercase tracking-wide text-fog-500">{pick(m.label, m.labelAr)}</div>
                   <div className="num text-lg font-semibold" style={{ color: m.value <= 0 ? 'var(--color-threat)' : m.value < 50 ? 'var(--color-warn)' : 'var(--color-ok)' }}>
                     {m.value}{m.unit}

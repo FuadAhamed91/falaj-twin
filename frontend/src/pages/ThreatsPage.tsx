@@ -79,7 +79,7 @@ export function ThreatsPage() {
                       initial={false}
                       animate={shared ? { opacity: 1, y: 0 } : { opacity: 0.5, y: 0 }}
                       transition={{ delay: shared ? i * 0.15 : 0 }}
-                      className="rounded-[var(--radius-panel)] border border-white/[0.07] bg-ink-850 p-3">
+                      className="rounded-[var(--radius-panel)] border border-hair-strong bg-ink-850 p-3">
                       <div className="flex items-center gap-2">
                         <Icon size={14} className="text-fog-300" />
                         <span className="text-[12px] font-semibold text-fog-50">{pick(fac.displayName, fac.displayNameAr)}</span>
@@ -110,7 +110,7 @@ export function ThreatsPage() {
                   const fac = facById(m.facilityId)
                   const meta = RESULT_META[m.result]
                   return (
-                    <div key={m.facilityId} className="flex items-start gap-3 rounded-lg border border-white/[0.06] bg-ink-800/40 p-3">
+                    <div key={m.facilityId} className="flex items-start gap-3 rounded-lg border border-hair bg-ink-800/40 p-3">
                       <Badge tone={meta.tone}>{t(meta.key)}</Badge>
                       <div className="min-w-0">
                         <div className="text-[12px] font-medium text-fog-100">{pick(fac.displayName, fac.displayNameAr)}</div>
@@ -128,7 +128,7 @@ export function ThreatsPage() {
         {/* Bundle viewer */}
         <div className="flex min-h-0 flex-col gap-3">
           <div className="panel flex min-h-0 flex-1 flex-col p-0">
-            <div className="flex items-center justify-between border-b border-white/[0.06] px-4 py-2.5">
+            <div className="flex items-center justify-between border-b border-hair px-4 py-2.5">
               <span className="eyebrow">STIX 2.1 bundle</span>
               <Badge tone="signal">{bundle.objects.length} objects</Badge>
             </div>

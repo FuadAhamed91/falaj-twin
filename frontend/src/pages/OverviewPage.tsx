@@ -29,7 +29,7 @@ export function OverviewPage() {
     <div className="grid h-full grid-rows-[1fr_auto] gap-3 p-4">
       <div className="grid min-h-0 grid-cols-[1fr_360px] gap-3">
         {/* Map */}
-        <div className="relative overflow-hidden rounded-[var(--radius-panel)] border border-white/[0.06] bg-ink-900">
+        <div className="relative overflow-hidden rounded-[var(--radius-panel)] border border-hair bg-ink-900">
           <NationalMap onSelectFacility={onSelect} />
           <div className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between p-4">
             <div className="pointer-events-auto">
@@ -101,7 +101,7 @@ export function OverviewPage() {
               ].map((s, i) => (
                 <div
                   key={i}
-                  className={`flex flex-col items-center gap-1.5 rounded-lg border p-2.5 ${s.on ? 'border-threat/30 bg-threat/[0.06]' : 'border-white/[0.05] bg-ink-800/40'}`}
+                  className={`flex flex-col items-center gap-1.5 rounded-lg border p-2.5 ${s.on ? 'border-threat/30 bg-threat/[0.06]' : 'border-hair bg-ink-800/40'}`}
                 >
                   <s.icon size={18} className={s.on ? 'text-threat' : s.color} />
                   <span className="text-[10.5px] text-fog-300">{s.label}</span>

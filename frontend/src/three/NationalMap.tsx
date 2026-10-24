@@ -2,7 +2,7 @@ import { memo, useMemo, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Html, Line, OrbitControls, Billboard } from '@react-three/drei'
-import { EffectComposer, Bloom, Vignette } from '@react-three/postprocessing'
+import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { Droplet, Zap, HeartPulse, ShieldHalf } from 'lucide-react'
 import { buildCountries } from './geo'
 import { project } from '../lib/geo'
@@ -47,25 +47,23 @@ function Landmass() {
         return (
           <group key={c.key}>
             {c.shapes.map((shape, i) => (
-              <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[0, focus ? 0 : -0.15, 0]} receiveShadow>
-                <extrudeGeometry args={[shape, { depth: focus ? 0.9 : 0.35, bevelEnabled: false }]} />
+              <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[0, focus ? 0 : -0.25, 0]} receiveShadow castShadow={focus}>
+                <extrudeGeometry args={[shape, { depth: focus ? 1.4 : 0.5, bevelEnabled: focus, bevelThickness: 0.25, bevelSize: 0.25, bevelSegments: 2 }]} />
                 <meshStandardMaterial
-                  color={focus ? '#0d2036' : '#0a1526'}
-                  emissive={focus ? '#0e2d4a' : '#060e1a'}
-                  emissiveIntensity={focus ? 0.5 : 0.2}
-                  roughness={0.85}
-                  metalness={0.1}
+                  color={focus ? '#fbfdff' : '#dfe8f2'}
+                  roughness={0.82}
+                  metalness={0}
                 />
               </mesh>
             ))}
             {c.outlines.map((pts, i) => (
               <Line
                 key={i}
-                points={pts.map((p) => [p.x, focus ? 0.92 : 0.22, p.z] as [number, number, number])}
-                color={focus ? COLORS.signal : '#1b3a5c'}
-                lineWidth={focus ? 1.6 : 0.7}
+                points={pts.map((p) => [p.x, focus ? 1.42 : 0.26, p.z] as [number, number, number])}
+                color={focus ? '#2563eb' : '#aebfd4'}
+                lineWidth={focus ? 1.6 : 0.8}
                 transparent
-                opacity={focus ? 0.8 : 0.35}
+                opacity={focus ? 0.55 : 0.5}
               />
             ))}
           </group>
@@ -78,8 +76,8 @@ function Landmass() {
 /* ---------- Network arc ---------- */
 function Arc({ from, to, color, active }: { from: [number, number]; to: [number, number]; color: string; active: boolean }) {
   const curve = useMemo(() => {
-    const a = new THREE.Vector3(from[0], 1, from[1])
-    const b = new THREE.Vector3(to[0], 1, to[1])
+    const a = new THREE.Vector3(from[0], 2.2, from[1])
+    const b = new THREE.Vector3(to[0], 2.2, to[1])
     const mid = a.clone().lerp(b, 0.5)
     mid.y += a.distanceTo(b) * 0.28 + 2
     return new THREE.QuadraticBezierCurve3(a, mid, b)
@@ -121,7 +119,7 @@ function SocHub() {
     }
   })
   return (
-    <group position={[SOC_POS[0], 0, SOC_POS[1]]}>
+    <group position={[SOC_POS[0], 1.4, SOC_POS[1]]}>
       <mesh position={[0, 2.4, 0]}>
         <icosahedronGeometry args={[0.7, 0]} />
         <meshStandardMaterial color={COLORS.signalDeep} emissive={COLORS.signal} emissiveIntensity={0.9} roughness={0.3} metalness={0.6} />
@@ -162,7 +160,7 @@ function Marker({ fac, threat, onClick }: { fac: Fac; threat: boolean; onClick: 
   })
   return (
     <group
-      position={[fac.pos[0], 0, fac.pos[1]]}
+      position={[fac.pos[0], 1.4, fac.pos[1]]}
       onClick={onClick}
       onPointerOver={(e) => {
         e.stopPropagation()
@@ -213,18 +211,21 @@ function Marker({ fac, threat, onClick }: { fac: Fac; threat: boolean; onClick: 
 function Scene({ threatFacilityId, onSelect }: { threatFacilityId: string | null; onSelect: (id: string) => void }) {
   return (
     <>
-      <color attach="background" args={[COLORS.ink950]} />
-      <fog attach="fog" args={[COLORS.ink950, 55, 120]} />
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[20, 40, 10]} intensity={1.1} color="#9fd0ff" />
-      <directionalLight position={[-30, 20, -20]} intensity={0.4} color={COLORS.signal} />
+      <color attach="background" args={['#e9f2fb']} />
+      <fog attach="fog" args={['#e9f2fb', 80, 170]} />
+      <hemisphereLight args={['#ffffff', '#cdd9e8', 0.9]} />
+      <directionalLight position={[26, 48, 18]} intensity={2.1} color="#fff6ea" castShadow
+        shadow-mapSize={[2048, 2048]} shadow-bias={-0.0004}>
+        <orthographicCamera attach="shadow-camera" args={[-70, 70, 70, -70, 10, 200]} />
+      </directionalLight>
+      <directionalLight position={[-30, 26, -24]} intensity={0.5} color="#bcd3ff" />
 
       {/* sea plane */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.3, 0]}>
-        <planeGeometry args={[400, 400]} />
-        <meshStandardMaterial color="#030912" roughness={0.4} metalness={0.3} />
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.35, 0]} receiveShadow>
+        <planeGeometry args={[600, 600]} />
+        <meshStandardMaterial color="#cfe3f3" roughness={0.5} metalness={0.05} />
       </mesh>
-      <gridHelper args={[200, 80, '#0d2238', '#0a1a2c']} position={[0, -0.25, 0]} />
+      <gridHelper args={[260, 104, '#bcd0e6', '#d6e2f0']} position={[0, -0.3, 0]} />
 
       <Landmass />
       <SocHub />
@@ -252,8 +253,7 @@ function Scene({ threatFacilityId, onSelect }: { threatFacilityId: string | null
         target={[6, 0, 0]}
       />
       <EffectComposer>
-        <Bloom intensity={0.9} luminanceThreshold={0.35} luminanceSmoothing={0.9} mipmapBlur radius={0.7} />
-        <Vignette eskil={false} offset={0.25} darkness={0.75} />
+        <Bloom intensity={0.45} luminanceThreshold={0.85} luminanceSmoothing={0.3} mipmapBlur radius={0.6} />
       </EffectComposer>
     </>
   )
@@ -283,6 +283,7 @@ export const NationalMap = memo(function NationalMap({
   return (
     <GLBoundary fallback={<MapFallback threatFacilityId={threatFacilityId} onSelect={onSelect} />}>
       <Canvas
+        shadows
         camera={{ position: [10, 46, 54], fov: 38 }}
         dpr={[1, 1.8]}
         gl={{ antialias: true, powerPreference: 'high-performance' }}

@@ -45,7 +45,7 @@ export function SimulationPage() {
               const active = f.id === facilityId
               return (
                 <button key={f.id} onClick={() => selectFacility(f.id as FacilityId)}
-                  className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[11px] font-medium ${active ? 'border-signal/30 bg-signal/10 text-signal' : 'border-white/[0.06] bg-ink-850 text-fog-400 hover:text-fog-200'}`}>
+                  className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[11px] font-medium ${active ? 'border-signal/30 bg-signal/10 text-signal' : 'border-hair bg-ink-850 text-fog-400 hover:text-fog-200'}`}>
                   <Icon size={13} /> {pick(f.displayName, f.displayNameAr)}
                 </button>
               )
@@ -54,7 +54,7 @@ export function SimulationPage() {
         </div>
 
         {/* Live schematic */}
-        <div className="relative min-h-[320px] flex-1 overflow-hidden rounded-[var(--radius-panel)] border border-white/[0.06]">
+        <div className="relative min-h-[320px] flex-1 overflow-hidden rounded-[var(--radius-panel)] border border-hair">
           <PlantSchematic topo={topo} scenario={scn} world={world} selectedId={selectedId} onSelect={selectNode} />
         </div>
 

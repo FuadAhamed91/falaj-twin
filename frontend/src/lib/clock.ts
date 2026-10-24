@@ -8,7 +8,10 @@ export function useClock() {
     let raf = 0
     let last = performance.now()
     const loop = (now: number) => {
-      const dt = Math.min(0.05, (now - last) / 1000) // clamp long frames
+      // Advance by real elapsed time so the sim tracks wall-clock even when the
+      // browser throttles rAF (e.g. a background tab). Cap a single step at 0.5s
+      // so returning from a long pause doesn't jump the whole scenario at once.
+      const dt = Math.min(0.5, (now - last) / 1000)
       last = now
       tick(dt)
       raf = requestAnimationFrame(loop)

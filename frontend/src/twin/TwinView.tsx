@@ -121,20 +121,22 @@ function Scene() {
   return (
     <>
       <color attach="background" args={['#030810']} />
-      <fog attach="fog" args={['#030810', 90, 240]} />
-      <hemisphereLight args={['#bcd8ff', '#0a1420', 0.6]} />
-      <directionalLight position={[40, 60, 20]} intensity={1.3} color="#fff4e0" castShadow shadow-mapSize={[1024, 1024]} />
-      <directionalLight position={[-40, 30, -30]} intensity={0.5} color="#2fa9d8" />
+      <fog attach="fog" args={['#030a16', 70, 210]} />
+      {/* Moody key + cool fill + cyan rim for the premium dark look. */}
+      <hemisphereLight args={['#5b7ea8', '#05080f', 0.28]} />
+      <directionalLight position={[40, 55, 25]} intensity={0.75} color="#ffe8c4" castShadow shadow-mapSize={[2048, 2048]} shadow-bias={-0.0005} />
+      <directionalLight position={[-45, 25, -35]} intensity={0.7} color="#22d3ee" />
+      <directionalLight position={[20, 18, -50]} intensity={0.35} color="#2563eb" />
       <group onPointerMissed={() => select(null)}>
         <FacilityModel topo={topo} />
-        <ContactShadows position={[0, 0.05, 0]} opacity={0.5} scale={200} blur={2.5} far={40} />
+        <ContactShadows position={[0, 0.06, 0]} opacity={0.65} scale={240} blur={2.8} far={50} color="#010308" />
         <AttackPath3D />
         <Markers />
       </group>
-      <OrbitControls enablePan minDistance={25} maxDistance={180} maxPolarAngle={Math.PI / 2.1} target={[8, 2, 6]} />
+      <OrbitControls enablePan minDistance={22} maxDistance={180} maxPolarAngle={Math.PI / 2.1} target={[8, 2, 6]} />
       <EffectComposer>
-        <Bloom intensity={0.75} luminanceThreshold={0.4} luminanceSmoothing={0.9} mipmapBlur radius={0.65} />
-        <Vignette offset={0.3} darkness={0.7} />
+        <Bloom intensity={1.25} luminanceThreshold={0.3} luminanceSmoothing={0.9} mipmapBlur radius={0.8} />
+        <Vignette offset={0.2} darkness={0.9} />
       </EffectComposer>
     </>
   )
@@ -153,8 +155,9 @@ export const TwinView = memo(function TwinView() {
   )
   return (
     <GLBoundary fallback={fallback}>
-      <Canvas shadows camera={{ position: [-40, 44, 70], fov: 42 }} dpr={[1, 1.8]}
-        gl={{ antialias: true, powerPreference: 'high-performance' }} className="h-full w-full">
+      <Canvas shadows camera={{ position: [-44, 40, 72], fov: 40 }} dpr={[1, 1.8]}
+        gl={{ antialias: true, powerPreference: 'high-performance', toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 0.95 }}
+        className="h-full w-full">
         <Scene />
       </Canvas>
     </GLBoundary>

@@ -1,4 +1,5 @@
 import { Component, Suspense, useMemo, type ReactNode } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 import { FacilityScene } from './Plant3D'
 import type { FacilityTopology } from '../sim'
@@ -13,7 +14,24 @@ const MODEL_URL: Record<string, string> = {
 
 function GLBModel({ url }: { url: string }) {
   const { scene } = useGLTF(url)
-  const cloned = useMemo(() => scene.clone(true), [scene])
+  const cloned = useMemo(() => {
+    const root = scene.clone(true)
+    // Blender albedos read too bright under the app's lighting; tune for the
+    // premium dark look and enable shadows.
+    root.traverse((o) => {
+      const mesh = o as THREE.Mesh
+      if (!mesh.isMesh) return
+      mesh.castShadow = true
+      mesh.receiveShadow = true
+      const mat = mesh.material as THREE.MeshStandardMaterial
+      if (mat && 'color' in mat) {
+        mat.color.multiplyScalar(0.62)
+        mat.envMapIntensity = 0.5
+        if (mat.metalness < 0.2) mat.metalness = 0.15
+      }
+    })
+    return root
+  }, [scene])
   return <primitive object={cloned} />
 }
 

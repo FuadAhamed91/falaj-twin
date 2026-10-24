@@ -5,6 +5,7 @@ import { useMemo } from 'react'
 import { create } from 'zustand'
 import {
   computeState,
+  detectScenario,
   getContainments,
   getScenario,
   getTopology,
@@ -76,6 +77,42 @@ export function useWorld(): WorldState {
   const elapsedSec = useSim((s) => s.elapsedSec)
   const decision = useSim((s) => s.decision)
   return useMemo(() => worldOf({ facilityId, mode, elapsedSec, decision }), [facilityId, mode, elapsedSec, decision])
+}
+
+const detCache = new Map<string, number[]>()
+function detTimes(facilityId: string): number[] {
+  let v = detCache.get(facilityId)
+  if (!v) {
+    v = detectScenario(getScenario(facilityId)).map((d) => d.at)
+    detCache.set(facilityId, v)
+  }
+  return v
+}
+
+/**
+ * World state that only changes when something *discrete* happens (a stage
+ * lands, a detection fires, containment applies) — not every animation frame.
+ * Use it for 3D overlays and heavy panels so they stay smooth while running.
+ */
+export function useDiscreteWorld(): WorldState {
+  const facilityId = useSim((s) => s.facilityId)
+  const mode = useSim((s) => s.mode)
+  const decision = useSim((s) => s.decision)
+  const sig = useSim((s) => {
+    const scn = getScenario(s.facilityId)
+    const t = s.elapsedSec
+    const stages = scn.stages.filter((st) => st.at <= t).length
+    const dets = s.mode === 'defended' ? detTimes(s.facilityId).filter((a) => a <= t).length : 0
+    const contained = s.decision?.approvedAt != null && s.decision.approvedAt <= t ? 1 : 0
+    const phase = t <= 0 ? 0 : t >= scn.durationSec ? 2 : 1
+    return `${stages}|${dets}|${contained}|${phase}`
+  })
+  return useMemo(() => {
+    const elapsedSec = useSim.getState().elapsedSec
+    return worldOf({ facilityId, mode, elapsedSec, decision })
+    // sig captures every discrete change of the world at the current time
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [facilityId, mode, decision, sig])
 }
 
 export function useOutcome(mode?: RunMode): RunOutcome {

@@ -1,0 +1,220 @@
+{
+  "retrieved": "2026-10-24",
+  "facilities": [
+    {
+      "id": "taweelah",
+      "officialName": "Taweelah RO Desalination IWP",
+      "displayName": "Taweelah RO Desalination Plant",
+      "sector": "water",
+      "emirate": "Abu Dhabi",
+      "locality": "Al Taweelah (southern part of the Taweelah Power & Water Complex, next to Khalifa Port / KIZAD)",
+      "officialUrl": "https://acwapower.com/en/what-we-do/projects/taweelah-ro-desalination-iwp/",
+      "coordinates": {
+        "lat": 24.7585,
+        "lon": 54.6748,
+        "precision": "site-level (~100 m): area-weighted centroid of the OSM plant polygon (area ~350,700 m2; ESIA states ~379,000 m2)",
+        "source": "OpenStreetMap way 1244230073 'Taweelah Reverse Osmosis' (man_made=water_works, water_works=desalination); centroid computed from Overpass geometry",
+        "sourceUrl": "https://www.openstreetmap.org/way/1244230073",
+        "crossChecked": [
+          "Wikidata Q11957209 (Al Taweelah Power & Desalination Complex) 24.7647, 54.6852: complex-level, ~1.26 km NE (https://www.wikidata.org/wiki/Q11957209)",
+          "de.wikipedia complex article 24.7658, 54.6850: complex-level, ~1.3 km NE (https://de.wikipedia.org/wiki/Kraftwerks-_und_Meerwasserentsalzungsanlagenkomplex_Al_Taweelah)",
+          "Esri World Imagery (Vantor WorldView-3, 2023-11-14) shows the plant, intake and PV inside the polygon",
+          "ESIA Vol. 1 (2019): site is in the southern portion of the Taweelah Power & Water Complex"
+        ]
+      },
+      "publicFacts": [
+        {"fact": "Capacity 200 MIGD by reverse osmosis; key facts give 909,201 m3/day (page text 909,200 m3/day). The live page returned 404 on 2026-10-24, so it was read from the Internet Archive snapshot of 2026-10-17", "sourceUrl": "https://web.archive.org/web/20261017011841/https://acwapower.com/en/what-we-do/projects/taweelah-ro-desalination-iwp/"},
+        {"fact": "Offtaker EWEC under a 30-year water purchase agreement; project cost US$907 million; commercial operations date Q1 2024", "sourceUrl": "https://web.archive.org/web/20261017011841/https://acwapower.com/en/what-we-do/projects/taweelah-ro-desalination-iwp/"},
+        {"fact": "ACWA Power share 40%; other investors Mubadala and TAQA; project company Taweelah RO Desalination Company; EPC SEPCOIII and Abengoa Agua", "sourceUrl": "https://web.archive.org/web/20261017011841/https://acwapower.com/en/what-we-do/projects/taweelah-ro-desalination-iwp/"},
+        {"fact": "Phase 1 began operating in June 2022 at 454.6 thousand m3/day (100 MIGD); connected to the grid in December 2021", "sourceUrl": "https://acwapower.com/en/media-center/latest-news/acwa-power-and-ewec-announce-the-start-of-operations-for-the-first-phase-of-al-taweelah-iwp-the-world-s-largest-reverse-osmosis-water-desalination-facility/"},
+        {"fact": "Phase 2 declared in commercial operation in April 2023; total 909,218 m3/day; photovoltaic field of more than 70 MWp; plant sits in the Taweelah power and water complex, 45 km from Abu Dhabi", "sourceUrl": "https://smartwatermagazine.com/news/abengoa/abengoa-starts-commercial-operation-phase-two-taweelah-desalination-plant-abu-dhabi"},
+        {"fact": "Passed 30 consecutive days of final tests and produced 204 MIGD in one day (2% above plan); named Desalination Plant of the Year 2023 at the Global Water Awards", "sourceUrl": "https://gulfconstructiononline.com/Article/1628193/World’s_largest_RO_desal_plant_begins_operation"},
+        {"fact": "IDOM carried out basic and detailed engineering for SEPCOIII; associated PV plant of 70 MWp", "sourceUrl": "https://www.idom.com/en/project/seawater-desalination-plant-with-associated-photovoltaic-installation-taweelah-909000-m3-day-and-70-mw/"},
+        {"fact": "Footprint about 379,000 m2 in the southern portion of the Taweelah Power & Water Complex. Components: open-channel seawater intake with breakwaters, 3 km piped outfall, RO plant, potable-water storage tanks, solar PV (ground- and roof-mounted)", "sourceUrl": "https://acwapower.com/media/kpvbklsg/al-taweelah-iwp-esia-volume-1-non-technical-summary.pdf"},
+        {"fact": "9 potable-water storage tanks east of the site (to be operated by EWEC): 6 x 105 m diameter x 17.8 m high and 3 x 77 m diameter x 17.5 m high", "sourceUrl": "https://acwapower.com/media/kudjbtxa/al-taweelah-iwp-esia-volume-2.pdf"},
+        {"fact": "PV was to be placed on the tank roofs and the former laydown area as well as around the RO plant; the plant buildings run diagonally across the site, surrounded by PV", "sourceUrl": "https://acwapower.com/media/kudjbtxa/al-taweelah-iwp-esia-volume-2.pdf"},
+        {"fact": "Site bordered to the S and W by the Taweelah Complex outfall channel; Khalifa Port ~2 km N; EGA alumina refinery ~4 km NE; KIZAD Area A ~2.5 km NE; new structures described as low-rise", "sourceUrl": "https://acwapower.com/media/kpvbklsg/al-taweelah-iwp-esia-volume-1-non-technical-summary.pdf"},
+        {"fact": "Conflicting published figures: capacity 909,200 / 909,201 / 909,216 / 909,218 m3/day; cost US$907 m vs US$874 m; PV 40 MW / ~50 MW / ~69 MW / >70 MWp. None is exact; treat as a range", "sourceUrl": "http://www.pv-magazine.com/2022/06/23/solar-partly-powering-worlds-largest-reverse-osmosis-desalination-plant/"}
+      ],
+      "referenceImages": [
+        {"view": "Satellite, top-down view of the whole site: 8 PV-roofed halls, ground PV, intake breakwaters, outfall channels (Vantor WorldView-3, 2023-11-14, ~0.31 m)", "pageUrl": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer", "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=54.6698,24.7548,54.6825,24.7631&bboxSR=4326&imageSR=3857&size=1000,715&format=jpg&f=image", "credit": "Esri World Imagery: Esri, Vantor (formerly Maxar), Earthstar Geographics, and the GIS User Community", "license": "Esri terms of use: view/reference only, attribution required; do not store exports or screenshots in the repo"},
+        {"view": "Satellite, top-down view of the off-site 9-tank potable-water farm (6 x 105 m, 3 x 77 m, PV-covered roofs) and the kite-shaped PV block ~1.2 km ESE", "pageUrl": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer", "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=54.6800,24.7430,54.6920,24.7570&bboxSR=4326&imageSR=3857&size=800,1020&format=jpg&f=image", "credit": "Esri World Imagery: Esri, Vantor (formerly Maxar), Earthstar Geographics, and the GIS User Community", "license": "Esri terms of use: view/reference only, attribution required; no redistribution"},
+        {"view": "Official 3D render, aerial view from the S/SW: ground PV in front, PV-roofed halls, channel on the right, old complex behind (pre-completion design)", "pageUrl": "https://acwapower.com/en/media-center/latest-news/acwa-power-and-ewec-announce-the-start-of-operations-for-the-first-phase-of-al-taweelah-iwp-the-world-s-largest-reverse-osmosis-water-desalination-facility/", "imageUrl": "https://acwapower.com/media/g0zppglb/rsz-1920-taweelah031.png", "credit": "© ACWA Power", "license": "© ACWA Power: modelling reference only, not redistributable"},
+        {"view": "Engineering render (2020), aerial view from the NE over the old complex: halls in rows, blue ground PV, intake (no roof PV in this version)", "pageUrl": "https://www.idom.com/en/project/seawater-desalination-plant-with-associated-photovoltaic-installation-taweelah-909000-m3-day-and-70-mw/", "imageUrl": "https://www.idom.com/wp-content/uploads/2020/04/Taweelah_Desalination_FV_Plant_EAU_SEPCOIII_IDOM_01.jpg", "credit": "© IDOM", "license": "© IDOM: modelling reference only, not redistributable"},
+        {"view": "Engineering render (2020), ground-level exterior: long low halls with olive/khaki cladding, rooftop plant, PV array, pipe rack beside a road (as-built colours unverified)", "pageUrl": "https://www.idom.com/en/project/seawater-desalination-plant-with-associated-photovoltaic-installation-taweelah-909000-m3-day-and-70-mw/", "imageUrl": "https://www.idom.com/wp-content/uploads/2020/04/Taweelah_Desalination_FV_Plant_EAU_SEPCOIII_IDOM_02.jpg", "credit": "© IDOM", "license": "© IDOM: modelling reference only, not redistributable"},
+        {"view": "Video: 'Virtual aerial view of the plant' (2021), linked from the IDOM page (not reviewed)", "pageUrl": "https://youtu.be/DHWyiYQ8FEw", "imageUrl": "", "credit": "© IDOM", "license": "YouTube terms: view only"}
+      ],
+      "exteriorFeatures": [
+        "Kite/diamond plot of ~0.35-0.38 km2 rotated ~45 deg: NW edge on the beach (~710 m), NE edge on the complex road (~640 m), SE edge on a channel (~470 m), SW edge on the outfall channel (~590 m)",
+        "Buildings on a true-north grid, set diagonally inside the plot: 2 north halls, a row of 4 halls, a long central hall, 2 grey-roofed service buildings, a long south hall. 8 large flat halls in total, all with PV-covered roofs (grid of panel blocks, white walkways, white roof edges)",
+        "Each hall in the row of 4 has a white-roofed annex (~23 m deep) on its south side; 2 small white-roofed ancillary blocks east of the central hall",
+        "Ground-mounted PV over most remaining land: long N-S strips ~18-20 m wide with ~1 m gaps and sawtooth ends along the plot edges. Gable-shaped row ends suggest east-west dual-tilt racking (inferred, unconfirmed)",
+        "Seawater intake at the N tip: hooked west rubble breakwater (~320 m) and straight east arm (~200 m) enclosing a calm basin (~120 x 150 m) with a floating boom; beige concrete intake structures on the shore",
+        "Small colour accents: 2 red-orange round tanks (~8-9 m dia) near the intake; white dome-roofed round tanks (~16-18 m dia) beside the central and south halls; small silver silos",
+        "Open rectangular basins with visible greenish water just west of the north-west hall",
+        "Teal cooling-water outfall channels (~60 m wide, sandy levees) wrap the SW and SE edges; Arabian Gulf to the NW with a sandy beach",
+        "Neighbours: old Taweelah A1/A2/B gas power and MSF desalination plants immediately NE (long evaporator rows, stacks, white tanks); Khalifa Port ~2 km N; EGA aluminium complex ~4 km NE",
+        "Off-site, ~1.1 km ESE: 9 giant flat-roofed potable-water tanks (6 x 105 m, 3 x 77 m, 17.5-17.8 m high) with PV-covered roofs in a rounded dark-paved enclosure (~390 x 300 m); a kite-shaped PV block (~490 x 630 m) just south of it (inferred former laydown area)"
+      ],
+      "modelingBrief": {
+        "massing": "Flat diamond plot carpeted with dark PV rows, holding an orthogonal north-aligned column of similar-height flat-roofed halls (2 + 4 + 1 + 1, plus 2 lower service blocks). Hooked rubble breakwater and basin at the north tip; teal channels on the SW and SE; open Gulf to the NW; a cluster of 9 giant round tanks ~1.1 km ESE. Local frame: metres East/North of 24.7585, 54.6748.",
+        "estimatedDimensions": "All estimates, +/-10-15 m. Halls are axis-aligned to true north. North halls N1/N2: centres (-81,+218), (+11,+218); ~67 x 110 m; ~18-25 m high (uncertain). Halls A-D: centres (-162/-75/+11/+97, +71); ~73 x 102 m each, including a ~23 m white south annex; ~18-19 m high. Central long hall: (+46,-58); ~173 x 69 m; ~15-20 m. Service buildings: (+5,-120) ~107 x 40 m and (+133,-120) ~108 x 45 m; ~10-14 m. South long hall: (+54,-184); ~172 x 68 m; ~15-20 m. White ancillary blocks: (+177,-44), (+177,-74); ~67 x 24 m; ~6-10 m. Intake structures: (-99,+359); ~110 x 70 m. West breakwater: root (-162,+328) to head (-315,+598). East breakwater: root (-47,+424) to head (-222,+516). Plot corners: N (-83,+453), E (+389,+16), S (+101,-354), W (-472,-155). Ground PV ~1-2.5 m high. Tank farm centre (+1118,-632): 6 x 105 m dia x 17.8 m and 3 x 77 m dia x 17.5 m (tank sizes sourced from the ESIA). Kite PV block centre (+1124,-1199), ~490 x 630 m. Hall heights come from shadows calibrated against the 17.8 m tanks.",
+        "palette": [
+          "#263340 PV modules, render value (satellite shows ~#38453A)",
+          "#E6E9EA PV walkways / roof edge bands",
+          "#F4F5F2 white membrane roofs (sampled ~#FDFEFB)",
+          "#B5B4AC grey service-building roofs (estimate)",
+          "#C4BC9C sand / unpaved ground (sampled)",
+          "#4A4C4A asphalt roads (estimate)",
+          "#1F7F78 outfall channel water, render value (sampled darker ~#145A4E)",
+          "#2E6F64 Gulf nearshore water, render value (sampled ~#204832)",
+          "#D3584A red-orange small tanks (sampled)",
+          "#A9A69C breakwater rubble (estimate)",
+          "#8A8C78 hall cladding as drawn in the 2020 IDOM render (as-built unverified)"
+        ],
+        "materials": "Flat roofs with PV module texture and walkway lines; metal-clad hall walls (colour unverified); steel tanks with white rims and PV roofs; rough grey rubble breakwaters; asphalt roads; sand ground; water with gentle normal maps.",
+        "surroundings": "NW: open Arabian Gulf and a sandy beach. NE: dense old Taweelah power/MSF desalination complex. ~2 km N: Khalifa Port. ~4 km NE: EGA aluminium complex. S/SE: channels, sandy plots and tree plantations. ESE: 9-tank farm and kite PV block. Inland: desert and KIZAD industrial plots.",
+        "unknowns": "Unknown or illustrative: exact hall heights, rooflines and parapets; facade colours/materials of the as-built halls; which building houses which process (not public, so use neutral labels such as 'Process hall A' and keep any process labels fictional); PV racking type; whether the kite PV block belongs to the project; intake structure form; tank-farm enclosure details; night lighting. Do not model gates, fences, security posts, cable/pipeline routes or interiors."
+      }
+    },
+    {
+      "id": "cleveland-clinic-abu-dhabi",
+      "officialName": "Cleveland Clinic Abu Dhabi",
+      "displayName": "Cleveland Clinic Abu Dhabi",
+      "sector": "healthcare",
+      "emirate": "Abu Dhabi",
+      "locality": "Al Maryah Island (Sowwah Square), Abu Dhabi city",
+      "officialUrl": "https://www.clevelandclinicabudhabi.ae/en",
+      "coordinates": {
+        "lat": 24.4971,
+        "lon": 54.3879,
+        "precision": "site-level (~50 m): Nominatim centroid of the OSM hospital campus polygon (~93,600 m2, about 23 acres)",
+        "source": "OpenStreetMap way 219107792 (amenity=hospital, 'Cleveland Clinic Abu Dhabi') via Nominatim lookup",
+        "sourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=W219107792&format=jsonv2",
+        "crossChecked": [
+          "en.wikipedia {{coord|24|29|50|N|53|23|18|E}}: latitude 24.4972 agrees, but the longitude is a typo (53 instead of 54; ~101 km error). Corrected to 54.3883, it lies ~50 m from OSM (https://en.wikipedia.org/wiki/Cleveland_Clinic_Abu_Dhabi)",
+          "Wikidata Q5132099 P625 24.4703, 54.3653 is WRONG (~3.8 km SW, central Abu Dhabi island)",
+          "Area-weighted centroid of the same OSM polygon: 24.4972, 54.3878 (~15 m away)",
+          "Esri World Imagery (Vantor Legion-04, 2025-11-18) matches the building footprints"
+        ]
+      },
+      "publicFacts": [
+        {"fact": "Joint venture of Mubadala and Cleveland Clinic (2006 agreement); opened 2015, officially inaugurated 3 Dec 2015; part of the M42 network since 2023", "sourceUrl": "https://en.wikipedia.org/wiki/Cleveland_Clinic_Abu_Dhabi"},
+        {"fact": "411 beds (321 acute, 90 critical care), expandable to 490; five clinical floors, three diagnostic and treatment levels and 13 inpatient floors; 23-acre facility", "sourceUrl": "https://en.wikipedia.org/wiki/Cleveland_Clinic_Abu_Dhabi"},
+        {"fact": "Height 99.6 m (327 ft); 24 floors above ground; completed 2015 (construction started 2009); composite structure", "sourceUrl": "https://www.skyscrapercenter.com/building/cleveland-clinic-abu-dhabi-hospital/21680"},
+        {"fact": "Design architect HDR (selected through an international design competition); architect of record Aedas; structural/MEP AECOM; main contractor Samsung C&T (CTBUH also lists Six Construct); developer Aldar Properties", "sourceUrl": "https://www.skyscrapercenter.com/building/cleveland-clinic-abu-dhabi-hospital/21680"},
+        {"fact": "2,300,000 sf (213,676 m2), LEED Gold. Each healthcare component has its own stacked architectural form; diamond-patterned glazing references Islamic geometry; glass echoes the sea; onyx-toned elements reference the desert", "sourceUrl": "https://www.hdrinc.com/portfolio/cleveland-clinic-abu-dhabi"},
+        {"fact": "A double-skinned curtain wall wraps the patient tower, with a nearly 5 ft (~1.5 m) air gap between the outer and inner skins", "sourceUrl": "https://continuingeducation.bnpmedia.com/courses/areditorial/transparency-literal-and-sustainable/2"},
+        {"fact": "Described as the largest structural-steel building in the UAE (>30,000 t). Wikipedia gives 422,681 m2 of floor space, which conflicts with HDR/CTBUH's 213,676 m2", "sourceUrl": "https://en.wikipedia.org/wiki/Cleveland_Clinic_Abu_Dhabi"},
+        {"fact": "Fatima bint Mubarak Center (cancer care) opened March 2023, 205,000 sq ft; the 2022 topping-off release gives 19,000 m2 and mentions the final glass panel on the tenth floor", "sourceUrl": "https://newsroom.clevelandclinic.org/2023/03/09/cleveland-clinic-opens-new-cancer-center-in-abu-dhabi/"},
+        {"fact": "The Aedas landscape page given in the brief returned 404 on 2026-10-24 and has no Wayback copy; its content could not be verified", "sourceUrl": "https://www.aedas.com/en/what-we-do/landscape/all_landscape/cleveland-clinic"}
+      ],
+      "referenceImages": [
+        {"view": "Daytime, elevated view across the channel (Feb 2016): teal diamond-glazed slab on top, glass bars, gold block, long glass podium, Al Maryah skyline", "pageUrl": "https://commons.wikimedia.org/wiki/File:Cleveland_Clinic_Abu_Dhabi_(210372013).jpeg", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Cleveland_Clinic_Abu_Dhabi_%28210372013%29.jpeg", "credit": "Francisco Anzola, via 500px / Wikimedia Commons", "license": "CC BY 3.0 (attribution + licence link required if reused); project policy: link only"},
+        {"view": "Dusk waterfront elevation from across the channel: podium, cantilevered bar, copper-toned block, floating slab with lit diamond pattern", "pageUrl": "https://www.hdrinc.com/portfolio/cleveland-clinic-abu-dhabi", "imageUrl": "https://www.hdrinc.com/sites/default/files/styles/carousel_image/public/2017-05/cleveland-clinic-abu-dhabi-pp1005-exterior.jpg", "credit": "© HDR (photographer not credited on the page)", "license": "© HDR: modelling reference only, not redistributable"},
+        {"view": "Dusk, elevated view from the entrance (north) side: slab, bar cantilevered towards the water, gold block, glass entrance cube, lawn sloping to the promenade", "pageUrl": "https://www.hdrinc.com/portfolio/cleveland-clinic-abu-dhabi", "imageUrl": "https://www.hdrinc.com/sites/default/files/styles/carousel_image/public/2017-05/cleveland-clinic-abu-dhabi-pp1009-exterior.jpg", "credit": "© HDR", "license": "© HDR: modelling reference only, not redistributable"},
+        {"view": "Dusk waterfront panorama (hero crop)", "pageUrl": "https://www.hdrinc.com/portfolio/cleveland-clinic-abu-dhabi", "imageUrl": "https://www.hdrinc.com/sites/default/files/styles/basic_page_hero/public/2024-02/cleveland-clinic-abu-dhabi-d2100-675.jpg", "credit": "© HDR", "license": "© HDR: modelling reference only, not redistributable"},
+        {"view": "Satellite, top-down: footprints, helipad on the north bar, green roofs, courtyards, waterfront promenade (Vantor Legion-04, 2025-11-18)", "pageUrl": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer", "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=54.3858,24.4950,54.3902,24.4993&bboxSR=4326&imageSR=3857&size=740,760&format=jpg&f=image", "credit": "Esri World Imagery: Esri, Vantor, Earthstar Geographics, and the GIS User Community", "license": "Esri terms of use: view/reference only, attribution required; no redistribution"}
+      ],
+      "exteriorFeatures": [
+        "Stacked-box composition: separate rectangular volumes, each with its own cladding (HDR: 'each healthcare component occupies its own architectural form')",
+        "Top: a long N-S inpatient glass slab (~128 x 41 m in plan, ~13 storeys) with its long face west towards the water, wrapped in a double-skin diamond-lattice curtain wall of teal-green glass; narrow darker vertical slot near one end",
+        "Dark recessed transfer band beneath the slab, so the slab appears to float",
+        "Two mid-level E-W diamond-glazed bars (~4 storeys): the north bar (~142 x 35 m) extends west and cantilevers towards the waterfront, with a rooftop helipad (green pad, white H); the south bar (~119 x 40 m) extends east. The slab rests across both in a pinwheel/Z plan",
+        "Gold / 'onyx'-toned patterned block (~125 x 50 m) under the north bar, with punched windows and a green roof garden on its exposed south part; reads gold by day, copper-brown at dusk",
+        "Long low fully glazed waterfront podium (~264 x 25 m, 4-5 storeys) along a curved promenade with palms; a lower 2-storey glass pavilion with a grass roof to its NW",
+        "Grey metal-clad central base (~117 x 114 m) with a landscaped courtyard",
+        "North entrance: glass cube, curving drop-off and tree-lined plazas; a broad lawn terrace slopes to the promenade; tree-lined park on the east side",
+        "Fatima bint Mubarak Center (cancer centre, 2023) at the south end, ~78 x 77 m in plan, height unconfirmed",
+        "Campus grid rotated ~7 deg clockwise from north; at night the diamond pattern is lit violet-blue in HDR's photos"
+      ],
+      "modelingBrief": {
+        "massing": "Extruded boxes, rotated ~7 deg clockwise, local frame in metres East/North of 24.4971, 54.3879. Waterfront podium (-95,+28) 264 x 25 m; pavilion (-110,+103) 166 x 41 m; gold block (-56,+74) 125 x 50 m; grey base (+25,+51) 117 x 114 m; north bar (-31,+100) 142 x 35 m, E-W; south bar (+49,+19) 119 x 40 m, E-W; inpatient slab (+14,+59) 128 x 41 m, N-S; cancer centre (+10,-81) 78 x 77 m. Footprints from OSM (ODbL).",
+        "estimatedDimensions": "Total height 99.6 m (CTBUH, sourced). Recommended split (estimates reconciled with photos): podium 0-20 m; pavilion 0-10 m; gold block 0-32 m; grey base 0-25 m; north and south bars ~32-50 m; recessed transfer band ~50-54 m (inset 3-5 m); slab ~54-99.6 m (~13 storeys; outer diamond skin ~1.5 m off the inner wall); cancer centre ~40-45 m (unconfirmed). The OSM community heights differ (bars 25-60 m, slab 60-110 m) and overshoot CTBUH.",
+        "palette": [
+          "#38767F slab glass mid-tone (sampled; highlights #64A1AA, shade #185660)",
+          "#4D827E bar glass (sampled; highlights #97CEC6)",
+          "#2A5055 podium curtain-wall glass (sampled; highlights #668480)",
+          "#E2C592 gold/onyx block panels by day (sampled; mid #8A7756, window voids #303D3A)",
+          "#8A4A30 gold block at dusk, copper-brown (estimate)",
+          "#D5DCDD diamond-lattice mullions (estimate)",
+          "#2E3436 recessed transfer band (estimate)",
+          "#9FA4A6 grey metal base (estimate)",
+          "#6E8F47 green roofs / lawns (estimate)",
+          "#D8CDB6 promenade paving (estimate)",
+          "#2BB3A3 channel water, turquoise (estimate)",
+          "#5A4FD0 night facade lighting accent (estimate)"
+        ],
+        "materials": "Two-layer glass on the slab (outer diamond mullion lattice over a reflective inner curtain wall); same diamond glazing on the bars, slightly greener; matte patterned panels with punched windows on the gold block; teal curtain wall with horizontal mullions on the podium; grey metal panels on the base; green roof gardens; generic helipad decal; no logos.",
+        "surroundings": "W: curved waterfront promenade with palms, then a turquoise channel (~150 m wide) and Abu Dhabi island (Al Zahiyah/Tourist Club area) with a beach and hotels. N: Sowwah Square / ADGM dark-glass towers and The Galleria (general geography). Road bridges cross the channel just N and S of the campus. E: tree-lined park, arterial road and the Al Maryah business district. NE: Al Reem Island across a second channel.",
+        "unknowns": "Unknown or illustrative: exact storey heights per volume (both splits are estimates); transfer-band inset and cantilever lengths; diamond-lattice module size; gold-block pattern; cancer-centre height and facade; rooftop equipment; night-lighting colours (vary by event). Do not model interiors, detailed entrances, security/emergency access or logos."
+      }
+    },
+    {
+      "id": "dewa-nad-hessa",
+      "officialName": "DEWA 132/11 kV digital substation (Nad Hessa)",
+      "displayName": "DEWA Nad Hessa Digital Substation",
+      "sector": "power",
+      "emirate": "Dubai",
+      "locality": "Nad Hessa (Nadd Hessa) community, Dubai; contains Dubai Silicon Oasis",
+      "officialUrl": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2025/05/he-saeed-mohammed-al-tayer-inspects",
+      "coordinates": {
+        "lat": 25.1219,
+        "lon": 55.3851,
+        "precision": "district-level (~2 km): centroid of the Nadd Hessa administrative boundary (bbox ~3.9 x 4.4 km). The substation's exact site is NOT located; label the pin as approximate",
+        "source": "OpenStreetMap relation 18471700 (Nadd Hessa admin boundary) via Nominatim lookup",
+        "sourceUrl": "https://nominatim.openstreetmap.org/lookup?osm_ids=R18471700&format=jsonv2",
+        "crossChecked": [
+          "Wikipedia, Dubai Silicon Oasis (inside Nadd Hessa) 25.1242, 55.3811: ~0.47 km away (https://en.wikipedia.org/wiki/Dubai_Silicon_Oasis)",
+          "OSM Overpass search for power=substation in the district bbox: no object named or tagged as the 132/11 kV Nad Hessa digital substation; exact site not confirmed in public sources and not inferred from imagery, on purpose"
+        ]
+      },
+      "publicFacts": [
+        {"fact": "State-of-the-art 132/11 kV digital substation (Nad Hessa), inspected by DEWA's MD & CEO; news dated 12 May 2025", "sourceUrl": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2025/05/he-saeed-mohammed-al-tayer-inspects"},
+        {"fact": "Total capacity 150 MVA", "sourceUrl": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2025/05/he-saeed-mohammed-al-tayer-inspects"},
+        {"fact": "Cost over AED 93.322 million; 649,064 safe man-hours with zero injuries; completed five months ahead of schedule", "sourceUrl": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2025/05/he-saeed-mohammed-al-tayer-inspects"},
+        {"fact": "Facilities integrated into a single building to minimise the built-up area", "sourceUrl": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2025/05/he-saeed-mohammed-al-tayer-inspects"},
+        {"fact": "57% CO2 reduction (54.24 t/yr); Green Apple Environment Award 2023, Green World Award 2023, Emirates Innovates Award for digital substation design", "sourceUrl": "https://www.mediaoffice.ae/en/news/2025/may/11-05/saeed-mohammed-al-tayer-inspects-state-of-the-art-13211-kv-digital-substation"},
+        {"fact": "DEWA commissioned 8 new 132 kV substations in H1 2024 at locations including 'Nadd Hessa'. Likely the same substation, but not explicitly stated", "sourceUrl": "https://mediaoffice.ae/en/news/2024/july/22-07/dewa-enhances-efficiency-of"},
+        {"fact": "DEWA's standardised digital 132 kV design (generic, not Nad Hessa-specific) saves ~220 m2 of construction area per substation", "sourceUrl": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2026/8/dewa-develops-a-standardised-digital"},
+        {"fact": "Nadd Hessa community: 9.8 km2, population 40,819 (2022)", "sourceUrl": "https://en.wikipedia.org/wiki/List_of_communities_in_Dubai"}
+      ],
+      "referenceImages": [
+        {"view": "ILLUSTRATIVE, not Nad Hessa: DEWA's news image for its standardised digital 132 kV substation. Stepped multi-volume block, cream panels with a tan checkerboard accent, red vertical pipes, cream perimeter wall and louvred gate. Appears computer-generated", "pageUrl": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2026/8/dewa-develops-a-standardised-digital", "imageUrl": "https://dewa.gov.ae/-/media/news/31aug2026B.ashx", "credit": "© Dubai Electricity & Water Authority", "license": "© DEWA: style reference only, not redistributable; do not copy DEWA marks/logos"},
+        {"view": "District context, top-down: Dubai Silicon Oasis / Nad Hessa villas, mid-rise towers, lake, E66/E311 highways, open sand (no substation identified)", "pageUrl": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer", "imageUrl": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=55.3600,25.1000,55.4120,25.1420&bboxSR=4326&imageSR=3857&size=1000,750&format=jpg&f=image", "credit": "Esri World Imagery: Esri, Vantor, Earthstar Geographics, and the GIS User Community", "license": "Esri terms of use: view/reference only, attribution required; no redistribution"},
+        {"view": "District boundary map (Nadd Hessa)", "pageUrl": "https://www.openstreetmap.org/relation/18471700", "imageUrl": "", "credit": "© OpenStreetMap contributors", "license": "ODbL 1.0: attribution required for derived geometry"}
+      ],
+      "exteriorFeatures": [
+        "DEWA states all facilities are in a single building (sourced)",
+        "Illustrative (from DEWA's generic 2026 render, not this site): compact stepped multi-volume block, with a taller core of ~4-5 storeys and wings of ~2-3 storeys",
+        "Illustrative: cream/ivory panel facade with a checkerboard of tan/taupe accent panels on one tall corner volume; few small openings",
+        "Illustrative: red vertical pipework on the facades, external steel ladders, small rooftop vents and guard-rails",
+        "Illustrative: cream perimeter boundary wall ~3-4 m with a sliding louvred metal gate; paved/sand apron",
+        "District context: suburban/tech-park setting of Nad Hessa / Dubai Silicon Oasis, with villa clusters, mid-rise towers, a small lake, landscaped boulevards, the E66/E311 interchange to the west, and open sand plots"
+      ],
+      "modelingBrief": {
+        "massing": "Illustrative generic DEWA 132 kV single-building substation: one stepped rectilinear block (long lower base, taller core, slim accent tower with checkerboard panels) inside a walled rectangular plot. Not a likeness of the real Nad Hessa building; label it 'illustrative model' in the UI.",
+        "estimatedDimensions": "Illustrative placeholders, not sourced: building ~60 x 35 m; core ~18-22 m high; wings ~8-12 m; accent tower ~22-25 m; plot ~90 x 60 m; boundary wall ~3.5 m. Proportions read off DEWA's illustration; scale freely.",
+        "palette": [
+          "#F5E9D2 cream/ivory panels (sampled sunlit ~#FAEBD0)",
+          "#C4A177 tan accent panels (sampled)",
+          "#8F7A60 taupe accent panels (estimate)",
+          "#6E6B66 panel colour in shadow (lighting, not paint)",
+          "#A8322D red pipework (estimate)",
+          "#9AA0A3 galvanised steel ladders/rails (estimate)",
+          "#B09373 sand ground (sampled)",
+          "#4482BD sky reference (sampled)"
+        ],
+        "materials": "Smooth precast/rendered panels with fine joints; painted steel pipes and ladders; louvred aluminium gate; concrete/sand apron.",
+        "surroundings": "District-level only: Nad Hessa / Dubai Silicon Oasis, with grey-roofed villa clusters and gardens, DSO mid-rise towers, a small lake, landscaped boulevards, the E66 (Dubai-Al Ain Road) / E311 (Sheikh Mohammed Bin Zayed Road) interchange on the west side, and open desert plots.",
+        "unknowns": "Unknown: exact location, plot size and orientation, building footprint/height/storeys/facade, whether any transformers are outdoors, wall/gate arrangement, colours. Everything is a generic stand-in. Do not model or label internal equipment rooms, transformer bays, cable routes, control rooms, gates or security features."
+      }
+    }
+  ],
+  "cities": [
+    {"name": "Abu Dhabi", "lat": 24.4667, "lon": 54.3667, "sourceUrl": "https://en.wikipedia.org/wiki/Abu_Dhabi"},
+    {"name": "Dubai", "lat": 25.2047, "lon": 55.2708, "sourceUrl": "https://en.wikipedia.org/wiki/Dubai"},
+    {"name": "Al Ain", "lat": 24.2075, "lon": 55.7447, "sourceUrl": "https://en.wikipedia.org/wiki/Al_Ain"},
+    {"name": "Sharjah", "lat": 25.3575, "lon": 55.3908, "sourceUrl": "https://en.wikipedia.org/wiki/Sharjah"}
+  ]
+}

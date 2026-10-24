@@ -3,6 +3,7 @@ import { Droplet, Zap, HeartPulse, Box, Network, Layers } from 'lucide-react'
 import { TwinView } from '../twin/TwinView'
 import { PlantSchematic } from '../twin/PlantSchematic'
 import { RunControls, ModeToggle, AssetPanel, TimelinePanel, PhaseBadge } from '../twin/panels'
+import { ViewControls } from '../twin3d/ViewControls'
 import { Segmented, Badge, SimDisclaimer } from '../components/ui'
 import { useSim, useWorld, type FacilityId } from '../store/simStore'
 import { useT, usePick } from '../i18n/useLang'
@@ -82,12 +83,12 @@ export function TwinPage() {
               <Layers size={12} /> {t('twin.zones')}
             </button>
           )}
-          {/* metrics strip */}
+          {/* metrics strip (top-left, under the title) */}
           {world.metrics.length > 0 && (
-            <div className="pointer-events-none absolute bottom-4 left-4 flex gap-2">
+            <div className="pointer-events-none absolute left-4 top-[108px] flex gap-2">
               {world.metrics.map((m) => (
-                <div key={m.key} className="rounded-lg border border-hair-strong bg-ink-900/85 px-3 py-2 backdrop-blur">
-                  <div className="text-[9px] uppercase tracking-wide text-fog-500">{pick(m.label, m.labelAr)}</div>
+                <div key={m.key} className="rounded-xl border border-hair-strong bg-white/90 px-3 py-2 shadow-sm backdrop-blur">
+                  <div className="text-[9px] font-semibold uppercase tracking-wide text-fog-500">{pick(m.label, m.labelAr)}</div>
                   <div className="num text-lg font-semibold" style={{ color: m.value <= 0 ? 'var(--color-threat)' : m.value < 50 ? 'var(--color-warn)' : 'var(--color-ok)' }}>
                     {m.value}{m.unit}
                   </div>
@@ -95,6 +96,8 @@ export function TwinPage() {
               ))}
             </div>
           )}
+          {/* 3D view controls */}
+          {view === 'physical' && <ViewControls />}
         </div>
 
         {/* Controls */}

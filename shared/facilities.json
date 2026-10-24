@@ -1,0 +1,88 @@
+{
+  "_note": "Geographic + descriptive metadata for the three real UAE facilities shown on the map. Coordinates are verified from public sources (see assets/references). FALAJ has NO access to these facilities' real systems — all cyber assets and telemetry in this product are synthetic.",
+  "retrieved": "2026-10-24",
+  "soc": {
+    "id": "soc",
+    "displayName": "National SOC",
+    "displayNameAr": "مركز العمليات الوطني",
+    "role": "Threat Intelligence Hub",
+    "roleAr": "مركز تبادل معلومات التهديدات",
+    "kind": "conceptual",
+    "note": "Simulated, locally-run coordination hub. Not a real facility and not a claim of government integration.",
+    "coordinates": { "lat": 24.4539, "lon": 54.3773 }
+  },
+  "facilities": [
+    {
+      "id": "taweelah",
+      "officialName": "Taweelah RO Desalination IWP",
+      "displayName": "Taweelah RO Desalination Plant",
+      "displayNameAr": "محطة الطويلة لتحلية المياه",
+      "sector": "water",
+      "emirate": "Abu Dhabi",
+      "emirateAr": "أبوظبي",
+      "locality": "Al Taweelah",
+      "localityAr": "الطويلة",
+      "officialUrl": "https://acwapower.com/en/what-we-do/projects/taweelah-ro-desalination-iwp/",
+      "hero": true,
+      "coordinates": { "lat": 24.7589, "lon": 54.6861 },
+      "coordinatePrecision": "site-level (~300 m), industrial coastline at Al Taweelah",
+      "publicFacts": [
+        "One of the world's largest reverse-osmosis (RO) desalination plants by capacity.",
+        "Located on the Al Taweelah industrial coast north-east of Abu Dhabi city.",
+        "Developed by a consortium led by ACWA Power; supplies potable water to the Abu Dhabi grid."
+      ],
+      "tagline": "Reverse-osmosis desalination · coastal industrial site",
+      "taglineAr": "تحلية بالتناضح العكسي · موقع صناعي ساحلي"
+    },
+    {
+      "id": "cleveland-clinic",
+      "officialName": "Cleveland Clinic Abu Dhabi",
+      "displayName": "Cleveland Clinic Abu Dhabi",
+      "displayNameAr": "كليفلاند كلينك أبوظبي",
+      "sector": "healthcare",
+      "emirate": "Abu Dhabi",
+      "emirateAr": "أبوظبي",
+      "locality": "Al Maryah Island",
+      "localityAr": "جزيرة المارية",
+      "officialUrl": "https://www.clevelandclinicabudhabi.ae/en",
+      "hero": false,
+      "coordinates": { "lat": 24.5008, "lon": 54.3892 },
+      "coordinatePrecision": "site-level (~150 m), Al Maryah Island",
+      "publicFacts": [
+        "Multispecialty hospital on Al Maryah Island, part of the Cleveland Clinic network.",
+        "Distinctive clustered-tower silhouette on the Abu Dhabi global-market island.",
+        "Sky-garden and podium architecture by HDR (building) with landscape work referenced via Aedas."
+      ],
+      "tagline": "Multispecialty hospital · Al Maryah Island",
+      "taglineAr": "مستشفى تخصصي · جزيرة المارية"
+    },
+    {
+      "id": "dewa-nad-hessa",
+      "officialName": "DEWA 132/11 kV Digital Substation — Nad Hessa",
+      "displayName": "DEWA Nad Hessa Digital Substation",
+      "displayNameAr": "محطة ند حصة الرقمية — ديوا",
+      "sector": "power",
+      "emirate": "Dubai",
+      "emirateAr": "دبي",
+      "locality": "Nad Hessa",
+      "localityAr": "ند حصة",
+      "officialUrl": "https://dewa.gov.ae/en/about-us/media-publications/latest-news/2025/05/he-saeed-mohammed-al-tayer-inspects",
+      "hero": false,
+      "coordinates": { "lat": 25.2456, "lon": 55.3892 },
+      "coordinatePrecision": "district-level (~1-2 km), Nad Hessa district, Dubai — exact substation parcel not confirmed from public sources",
+      "publicFacts": [
+        "A DEWA 132/11 kV digital (IEC 61850) substation serving the Nad Hessa area of Dubai.",
+        "Digital substations use fibre-based protection and control rather than conventional copper wiring.",
+        "Representative exterior only — precise site parcel and equipment arrangement are not publicly confirmed."
+      ],
+      "tagline": "132/11 kV digital substation · Dubai grid",
+      "taglineAr": "محطة رقمية 132/11 ك.ف · شبكة دبي"
+    }
+  ],
+  "cities": [
+    { "name": "Abu Dhabi", "nameAr": "أبوظبي", "lat": 24.4667, "lon": 54.3667 },
+    { "name": "Dubai", "nameAr": "دبي", "lat": 25.2697, "lon": 55.3094 },
+    { "name": "Sharjah", "nameAr": "الشارقة", "lat": 25.3573, "lon": 55.4033 },
+    { "name": "Al Ain", "nameAr": "العين", "lat": 24.2075, "lon": 55.7447 }
+  ]
+}

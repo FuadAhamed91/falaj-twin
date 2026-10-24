@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/500.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+
+@custom-variant rtl (&:where([dir="rtl"], [dir="rtl"] *));
+
+@theme {
+  --font-sans: "Inter Variable", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", monospace;
+  --font-arabic: "IBM Plex Sans Arabic", "Inter Variable", ui-sans-serif, sans-serif;
+
+  /* Surfaces: deep navy → black */
+  --color-ink-950: #02060d;
+  --color-ink-900: #050b16;
+  --color-ink-850: #08111f;
+  --color-ink-800: #0b1628;
+  --color-ink-750: #0f1d33;
+  --color-ink-700: #13243e;
+  --color-ink-600: #1b304f;
+  --color-ink-500: #284366;
+
+  /* Text */
+  --color-fog-50: #f1f5fb;
+  --color-fog-100: #e2e9f4;
+  --color-fog-200: #c3cfe1;
+  --color-fog-300: #9fb0c9;
+  --color-fog-400: #7488a6;
+  --color-fog-500: #566a87;
+
+  /* Signal palette — each colour has exactly one meaning */
+  --color-signal: #22d3ee;        /* network / interactive */
+  --color-signal-deep: #2563eb;   /* links, focus */
+  --color-ok: #34d399;            /* healthy, contained */
+  --color-warn: #fbbf24;          /* detection / early warning */
+  --color-predict: #a78bfa;       /* scenario-based prediction */
+  --color-threat: #fb3b5c;        /* simulated attack / impact */
+
+  --radius-panel: 14px;
+  --shadow-panel: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 20px 40px -24px rgb(0 0 0 / 0.8);
+
+  --animate-pulse-soft: pulse-soft 2.4s ease-in-out infinite;
+  --animate-sweep: sweep 2.8s linear infinite;
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+  }
+  @keyframes sweep {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  html {
+    color-scheme: dark;
+    background: var(--color-ink-950);
+  }
+  body {
+    @apply bg-ink-950 font-sans text-fog-100 antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+    overflow: hidden;
+  }
+  [dir="rtl"] body,
+  [dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-signal) 35%, transparent);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-ink-600) transparent;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-[var(--radius-panel)] border border-white/[0.06] bg-ink-850/80 shadow-[var(--shadow-panel)] backdrop-blur-xl;
+  }
+  .panel-solid {
+    @apply rounded-[var(--radius-panel)] border border-white/[0.06] bg-ink-850 shadow-[var(--shadow-panel)];
+  }
+  .glass {
+    @apply rounded-[var(--radius-panel)] border border-white/[0.08] bg-ink-900/70 shadow-[var(--shadow-panel)] backdrop-blur-xl;
+  }
+  .eyebrow {
+    @apply text-[10.5px] font-semibold tracking-[0.14em] text-fog-400 uppercase;
+  }
+  [dir="rtl"] .eyebrow {
+    @apply tracking-normal;
+  }
+  .num {
+    @apply font-mono tabular-nums;
+  }
+  .hairline {
+    @apply border-white/[0.06];
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

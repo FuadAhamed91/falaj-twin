@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.vite/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+backend/*.db
+backend/data/*.db
+# blender
+*.blend1
+*.blend2
+# env
+.env
+.env.local
+# playwright
+test-results/
+playwright-report/

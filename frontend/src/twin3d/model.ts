@@ -62,6 +62,13 @@ export function useFacilityModel(url: string) {
           mat.envMapIntensity = 1.4
           registry.water.push(mat)
         }
+        // Architectural glass → crisp, reflective curtain wall that mirrors the
+        // sky and neighbouring towers.
+        if (name === 'glass_blue' || name === 'glass' || name === 'diagrid' || name === 'car_glass') {
+          mat.roughness = name === 'diagrid' ? 0.12 : 0.06
+          mat.metalness = 0.1
+          mat.envMapIntensity = 2.4
+        }
         if (name === 'lamp' || name === 'window_lit') registry.emissive.push(mat)
         if (name === 'solar') {
           mat.envMapIntensity = 1.3
